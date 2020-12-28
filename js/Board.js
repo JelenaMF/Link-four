@@ -20,4 +20,9 @@ class Board {
       }
       return spaces; 
    }
+   drawHTMLBoard() {
+      for(const dSpace of spaces) {
+         drawSVGSpace();
+      }
+   }
 }
