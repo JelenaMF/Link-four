@@ -15,16 +15,18 @@ class Game {
  * @return  {Array}    An array of two Player objects.
  */
    createPlayers(){
-    const players = [new Players('player 1', 1, '#e15258', true),
-                    new Players('player 2', 2, '#e59a13')];
+    const players = [new Player('Player 1', 1, '#e15258', true),
+                    new Player('Player 2', 2, '#e59a13')];
     return players;
    }
    /** get game ready for play 
     * initializes game
    */
    startGame() {
+     /**drawing the games board  */
     this.board.drawHTMLBoard()
-    this.activePlayer.activeToken.drawHTMLToken()
+     /** drawing the active player with the active token */
+    this.activePlayer.activeToken.drawHTMLToken();
     this.ready = true;
 
    }
