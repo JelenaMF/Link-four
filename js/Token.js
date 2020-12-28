@@ -7,15 +7,13 @@ class Token {
     }
    drawHTMLToken() {
         const tokenDIV = document.createElement('div');
-        document.getElementsByID('game-board-underlay').appendChild(tokenDiv);
-        tokenDIV.setAttribute('#tokenID',  Token.id);
-        tokenDIV.setAttribute('.token', Token);
-        tokenDIV.style.display = Players.color; 
+        document.getElementsByID('game-board-underlay').appendChild(tokenDIV);
+        tokenDIV.setAttribute('id',  this.id);
+        tokenDIV.setAttribute('class', 'token');
+        tokenDIV.style.display = this.owner.color; 
        }
-   htmlToken() {
-    }
-    get playerToken {
-        return htmlToken();
-    }
+
+    
+  
 }
 
