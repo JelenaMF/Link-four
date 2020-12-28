@@ -10,9 +10,12 @@ class Token {
         document.getElementsByID('game-board-underlay').appendChild(tokenDiv);
         tokenDIV.setAttribute('#tokenID',  Token.id);
         tokenDIV.setAttribute('.token', Token);
+        tokenDIV.style.display = Players.color; 
        }
    htmlToken() {
-
-
-   }
+    }
+    get playerToken {
+        return htmlToken();
+    }
 }
+
