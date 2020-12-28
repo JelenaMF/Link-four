@@ -5,6 +5,14 @@ class Token {
         this.id = `token-${index}-${owner.id}`;
         this.dropped = false;
     }
-   
+   drawHTMLToken() {
+        const tokenDIV = document.createElement('div');
+        document.getElementsByID('game-board-underlay').appendChild(tokenDiv);
+        tokenDIV.setAttribute('#tokenID',  Token.id);
+        tokenDIV.setAttribute('.token', Token);
+       }
+   htmlToken() {
 
+
+   }
 }
