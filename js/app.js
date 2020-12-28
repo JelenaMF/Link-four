@@ -1,7 +1,8 @@
-//const game = new Game();
+let game;
 
 document.getElementById('begin-game').addEventListener('click', (e) => {
-    Game.startGame();
+    game = new Game();
+    game.startGame();
     this.style.display = 'none';
     document.getElementById('play-area').style.opacity = '1';
     console.log('start button works');
