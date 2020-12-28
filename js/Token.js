@@ -6,11 +6,11 @@ class Token {
         this.dropped = false;
     }
    drawHTMLToken() {
-        const tokenDIV = document.createElement('div');
-        document.getElementsByID('game-board-underlay').appendChild(tokenDIV);
-        tokenDIV.setAttribute('id',  this.id);
-        tokenDIV.setAttribute('class', 'token');
-        tokenDIV.style.display = this.owner.color; 
+        const token = document.createElement('div');
+        document.getElementById('game-board-underlay').appendChild(token);
+        token.setAttribute('id',  this.id);
+        token.setAttribute('class', 'token');
+        token.style.display = this.owner.color; 
        }
 
     

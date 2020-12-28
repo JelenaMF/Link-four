@@ -23,7 +23,7 @@ class Players {
     /** searches throught the tokens for tokens that weren't dropped  */
     
     get unusedTokens() {
-       return this.tokens.filter(token => !token.dropped);
+       return this.token.filter(token => !token.dropped);
     }
     /** gets the active token by returning the first token in the array of unusedTokens
      * @return {object} First token object in the array of unused tokens 
