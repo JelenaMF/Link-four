@@ -28,6 +28,8 @@ class Game {
      /** drawing the active player with the active token */
     this.activePlayer.activeToken.drawHTMLToken();
     this.ready = true;
-
+   }
+   handleKeyDown() {
+     
    }
 }
