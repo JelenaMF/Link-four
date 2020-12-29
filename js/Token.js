@@ -15,7 +15,7 @@ class Token {
         token.setAttribute('class', 'token');
         token.style.display = this.owner.color; 
        }
-
+       
     
   
 }
