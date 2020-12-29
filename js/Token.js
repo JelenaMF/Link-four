@@ -13,7 +13,7 @@ class Token {
         document.getElementById('game-board-underlay').appendChild(token);
         token.setAttribute('id',  this.id);
         token.setAttribute('class', 'token');
-        token.style.display = this.owner.color; 
+        token.style.background = this.owner.color; 
        }
        
     
