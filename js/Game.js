@@ -33,7 +33,7 @@ class Game {
  * Branches code, depending on what key player presses
  * @param   {Object}    e - Keydown event object
  */
-   handleKeyDown(e) {
+   handleKeydown(e) {
       if(this.ready){
         if(e.key === 'ArrowLeft') {
           //move left 
