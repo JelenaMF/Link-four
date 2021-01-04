@@ -37,5 +37,5 @@ class Player {
  */
     checkTokens(){
         return this.unusedTokens.length == 0 ? false : true;
-    }
+        }
  }
