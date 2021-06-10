@@ -1,13 +1,16 @@
 <html>
     <head>
         <meta charset = "UTF-8">
-        <title>Four in a Row with Treehouse</title>
+        <title>Link Four</title>
         <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet">
         <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
     </head>
 
     <body>
-		<h1>Link Four</h1>
+        <div id=title>
+            <h1>Link Four</h1>
+
+        </div>
 		<!-- 
 			Start Game Button
 			When a player clicks this button, the game will begin
@@ -15,9 +18,13 @@
     	<button id = "begin-game">
     		Start
     	</button>
-        <p>Use the arrow keys to move tokens right to left and down to drop</p>
-    
+
+        <div id="rules">
+            <h3>How to Play:</h3>
+            <p>Use the right and left arrow keys to move tokens side to side. Use the down arrow to select the row and dropping the token</p>
 	
+        </div>
+        
 		<!-- 
 			#game-scene: container for entire play area
 			#play-area: container for the board
@@ -50,7 +57,9 @@
                     <div id = "token" data-column = "0">
                     </div>
                 </div>
-            
+                <button style="display:none;"id="new-game">
+                    Start New Game
+                </button>
 			
 				<!-- 
 					SVGs were used to create the board and the "holes" for the Spaces

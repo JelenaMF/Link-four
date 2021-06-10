@@ -5,12 +5,12 @@ document.getElementById('begin-game').addEventListener('click', function(){
     game.startGame();
     this.style.display = 'none';
     document.getElementById('play-area').style.opacity = '1';
-
+    document.getElementById('rules').style.display = 'none';
+    document.getElementById('title').classList.add('title');
 });
 /** 
  * Listen for keyboard presses
  */
 document.addEventListener('keydown', (e) => {
     game.handleKeydown(e);
-    console.log(e.key);
 });

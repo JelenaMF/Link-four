@@ -28,6 +28,7 @@ class Game {
      /** drawing the active player with the active token */
     this.activePlayer.activeToken.drawHTMLToken();
     this.ready = true;
+    this.reset();
    }
 
    playToken() {
@@ -138,8 +139,26 @@ checkForWin(target){
  * @param {string} message - Game over message.      
  */
   gameOver(message) {
-  document.getElementById('game-over').style.display = 'block';
-  document.getElementById('game-over').textContent = message;
+    const endGame = document.getElementById('game-over');
+    endGame.style.display = 'block';
+    endGame.textContent = message;
+    const resetButton  = document.getElementById('new-game');
+    resetButton.style.display = 'block';
+  }
+
+  reset(token, target){
+    let spaces = this.board.spaces;
+    console.log(spaces);
+    document.getElementById('new-game').addEventListener('click', (e) => {
+      for(let space of spaces) {
+        if(space.token != null) {
+          space.token = null;
+          this.board;
+        }
+        console.log(space);
+      }
+
+    });
   }
    /** 
  * Updates game state after token is dropped. 
@@ -148,7 +167,6 @@ checkForWin(target){
  */
   updateGameState(token, target) {
     target.mark(token);
-
     if(!this.checkForWin(target)) {
 
       this.switchPlayers();
