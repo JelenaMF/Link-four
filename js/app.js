@@ -14,3 +14,12 @@ document.getElementById('begin-game').addEventListener('click', function(){
 document.addEventListener('keydown', (e) => {
     game.handleKeydown(e);
 });
+
+const resetButton = document.getElementById('new-game');
+resetButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  resetButton.style.display = 'none';
+  game.reset();
+  game.startGame();
+
+});

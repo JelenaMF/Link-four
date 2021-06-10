@@ -3,6 +3,7 @@ class Game {
        this.board = new Board();
        this.players = this.createPlayers();
        this.ready = false;
+
    }
 /**Returns active player 
  * @return {object} player - the active player.
@@ -28,7 +29,7 @@ class Game {
      /** drawing the active player with the active token */
     this.activePlayer.activeToken.drawHTMLToken();
     this.ready = true;
-    this.reset();
+
    }
 
    playToken() {
@@ -146,19 +147,18 @@ checkForWin(target){
     resetButton.style.display = 'block';
   }
 
-  reset(token, target){
+  //adds an event listener on the reset button an clears the gameboard of played token
+  reset(){
     let spaces = this.board.spaces;
-    console.log(spaces);
-    document.getElementById('new-game').addEventListener('click', (e) => {
-      for(let space of spaces) {
-        if(space.token != null) {
-          space.token = null;
-          this.board;
-        }
-        console.log(space);
-      }
-
-    });
+    console.log(spaces)
+    const tokens = document.querySelectorAll('.token');
+    console.log(tokens);
+    for(let i=0; i <= tokens.length; i++) {
+      const token = tokens[i];
+      console.log(tokens[i]);
+      token.removeAttribute('class', 'token');
+    }
+    this.board;
   }
    /** 
  * Updates game state after token is dropped. 
