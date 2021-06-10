@@ -147,18 +147,22 @@ checkForWin(target){
     resetButton.style.display = 'block';
   }
 
-  //adds an event listener on the reset button an clears the gameboard of played token
+  //adds an event listener on the reset button and clears the gameboard of played token
   reset(){
     let spaces = this.board.spaces;
-    console.log(spaces)
+    document.getElementById('game-over').style.display = 'none'; //removes gameover message when start new game is clicked
     const tokens = document.querySelectorAll('.token');
-    console.log(tokens);
-    for(let i=0; i <= tokens.length; i++) {
-      const token = tokens[i];
-      console.log(tokens[i]);
+    for(const token of tokens){
       token.removeAttribute('class', 'token');
     }
-    this.board;
+    for (const space of spaces) {
+      console.log(space);
+      for(const spaces of space) {
+        if(spaces.token != null){
+          spaces.token = null;
+        }
+      }
+    }
   }
    /** 
  * Updates game state after token is dropped. 
